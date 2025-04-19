@@ -12,7 +12,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const appsScriptUrl = "https://script.google.com/macros/s/AKfycbxOWTgLBCOVXeXeF9a8u4ZnV0NBu5XS3blqGIKGFK-IWg-nSybpRQqY2RK--tyd0aEG8A/exec";
+    const appsScriptUrl = "https://script.google.com/macros/s/AKfycbwy4Cc_VD3uyn33y0ryvMXvjzS2FVMRo04xHJEi9ft9tTxut82E6yOvAiYGCoG7Ywlr8w/exec";
 
     const response = await fetch(appsScriptUrl, {
       method: "POST",
