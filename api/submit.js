@@ -1,11 +1,9 @@
 export default async function handler(req, res) {
-  // CORS headers for every request
-  res.setHeader("Access-Control-Allow-Origin", "https://www.stouras.com");
+  res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
   if (req.method === "OPTIONS") {
-    // Preflight handled
     return res.status(200).end();
   }
 
@@ -14,7 +12,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const appsScriptUrl = "https://script.google.com/macros/s/AKfycby-GUVwxJLYifkAoHJCnBZmI8G1Dc51nTmEFa75_meW4YvOK2UtbmX0vQ-b0xj0oKBT0g/exec";
+    const appsScriptUrl = "https://script.google.com/macros/s/AKfycbyDgYLI1Nw3BeYttjVoCIgoRKwwL97IARP_9f7QXrXe21KVnq58D9Lf8pTZ7QVFktjcHA/exec";
 
     const response = await fetch(appsScriptUrl, {
       method: "POST",
